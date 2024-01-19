@@ -20,15 +20,15 @@ This project simulates the temperature of a graphics card under different comput
 
 The core of the simulation is based on the following ODE, which models the temperature dynamics:
 
-\[ \frac{dT(t)}{dt} = k \cdot P(t) - h \cdot (T(t) - T_{\text{ambient}}) \]
+$\[ \frac{dT(t)}{dt} = k \cdot P(t) - h \cdot (T(t) - T_{\text{ambient}}) \]$
 
 Where:
-- \( T(t) \) is the temperature of the graphics card at time \( t \).
-- \( \frac{dT(t)}{dt} \) represents the rate of change of temperature over time.
-- \( k \) is a constant for the efficiency of converting computational load to heat.
-- \( P(t) \) is the computational load at time \( t \).
-- \( h \) is the heat transfer coefficient.
-- \( T_{\text{ambient}} \) is the ambient temperature.
+- $\( T(t) \)$ is the temperature of the graphics card at time $\( t \)$.
+- $\( \frac{dT(t)}{dt} \)$ represents the rate of change of temperature over time.
+- $\( k \)$ is a constant for the efficiency of converting computational load to heat.
+- $\( P(t) \)$ is the computational load at time $\( t \)$.
+- $\( h \)$ is the heat transfer coefficient.
+- $\( T_{\text{ambient}} \)$ is the ambient temperature.
 
 ### Key Components
 
@@ -36,7 +36,7 @@ Where:
 
 2. **Computational Load Function**: Based on the user's choice, the program sets a computational load level, which affects the rate of temperature change.
 
-3. **ODE Definition and Solution**: An ODE function (`heat_ode`) defines the relationship between the temperature, the computational load, and the cooling efficiency. The `scipy.integrate.solve_ivp` function solves this ODE.
+3. **ODE Definition and Solution**: An ODE function (`heatODE`) defines the relationship between the temperature, the computational load, and the cooling efficiency. The `scipy.integrate.solve_ivp` function solves this ODE.
 
 4. **Visualization**: The results are visualized using `matplotlib`, displaying how the temperature of the graphics card evolves over time.
 
