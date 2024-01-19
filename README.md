@@ -8,6 +8,15 @@ This project simulates the temperature of a graphics card under different comput
 
 - James Miller
 
+## How to Run
+
+Ensure you have Python installed with the required packages (`numpy`, `matplotlib`, `scipy`). Run the script from the command line or an IDE.
+
+```bash
+pip install numpy matplotlib scipy
+python ODE_P1.py
+```
+
 ## Code Packages Used
 
 - `numpy`: Used for numerical operations.
@@ -23,6 +32,7 @@ The core of the simulation is based on the following ODE, which models the tempe
 $\[ \frac{dT(t)}{dt} = k \cdot P(t) - h \cdot (T(t) - T_{\text{ambient}}) \]$
 
 Where:
+
 - $\( T(t) \)$ is the temperature of the graphics card at time $\( t \)$.
 - $\( \frac{dT(t)}{dt} \)$ represents the rate of change of temperature over time.
 - $\( k \)$ is a constant for the efficiency of converting computational load to heat.
@@ -46,7 +56,3 @@ Where:
 2. Define the ODE based on the inputs.
 3. Solve the ODE over a specified time interval.
 4. Plot the results to visualize the temperature change over time.
-
-## How to Run
-
-Ensure you have Python installed with the required packages (`numpy`, `matplotlib`, `scipy`). Run the script from the command line or an IDE.
