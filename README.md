@@ -1,58 +1,58 @@
-# Graphics Card Temperature Simulation
+# Queue Length ODE Solver
 
-## Project Overview
+This is a Python program that allows you to solve and visualize the Queue Length Ordinary Differential Equation (ODE). You can specify the arrival rate and processing rate as inputs or use default values. The program then calculates and displays the queue length over time.
 
-This project simulates the temperature of a graphics card under different computational loads over time. The simulation is based on solving an Ordinary Differential Equation (ODE) that models the heat dynamics of a graphics card.
+## Installation
 
-## Programmer
+1. Clone or download this repository to your local machine.
 
-- James Miller
+    ```bash
+	https://github.com/jammil002/ODEP1.git
+    ```
 
-## How to Run
+2. Navigate to the project directory:
 
-Ensure you have Python installed with the required packages (`numpy`, `matplotlib`, `scipy`). Run the script from the command line or an IDE.
+    ```bash
+    cd ODEP1
+    ```
 
-```bash
-pip install numpy matplotlib scipy
-python ODE_P1.py
-```
+3. Install the required Python packages (NumPy, SciPy, and Matplotlib) using pip:
 
-## Code Packages Used
+    ```bash
+    pip install numpy scipy matplotlib
+    ```
 
-- `numpy`: Used for numerical operations.
-- `matplotlib`: Utilized for plotting the temperature curve.
-- `scipy.integrate`: Employed for solving the ODE.
+## Usage
 
-## Approach to Implementation
+1. Open a terminal or command prompt.
 
-### ODE Equation
+2. Navigate to the directory where you cloned or downloaded the `ODEP1` repository.
 
-The core of the simulation is based on the following ODE, which models the temperature dynamics:
+3. Run the program:
 
-$\[ \frac{dT(t)}{dt} = k \cdot P(t) - h \cdot (T(t) - T_{\text{ambient}}) \]$
+    ```bash
+    python ODE_P1.py
+    ```
 
-Where:
+4. Follow the on-screen prompts to input the arrival rate and processing rate. You can enter your values or press Enter to use default values (2.0 for arrival rate and 1.0 for processing rate).
 
-- $\( T(t) \)$ is the temperature of the graphics card at time $\( t \)$.
-- $\( \frac{dT(t)}{dt} \)$ represents the rate of change of temperature over time.
-- $\( k \)$ is a constant for the efficiency of converting computational load to heat.
-- $\( P(t) \)$ is the computational load at time $\( t \)$.
-- $\( h \)$ is the heat transfer coefficient.
-- $\( T_{\text{ambient}} \)$ is the ambient temperature.
+5. The program will calculate and display the queue length over time, showing a 2D graph.
 
-### Key Components
+6. You can close the graph window to exit the program.
 
-1. **User Input for Parameters**: The program prompts the user to input various parameters, including the efficiency of converting computational load to heat (`k`), the heat transfer coefficient (`h`), the ambient temperature, and the computational load level (low, medium, high).
+## Examples
 
-2. **Computational Load Function**: Based on the user's choice, the program sets a computational load level, which affects the rate of temperature change.
+### Example 1: Using Default Values
 
-3. **ODE Definition and Solution**: An ODE function (`heatODE`) defines the relationship between the temperature, the computational load, and the cooling efficiency. The `scipy.integrate.solve_ivp` function solves this ODE.
+If you press Enter without entering values for arrival rate and processing rate, the program will use default values:
 
-4. **Visualization**: The results are visualized using `matplotlib`, displaying how the temperature of the graphics card evolves over time.
+- Arrival Rate: 2.0 tasks per unit time
+- Processing Rate: 1.0 tasks per unit time
 
-### Program Flow
+### Example 2: Providing Custom Values
 
-1. Gather user inputs.
-2. Define the ODE based on the inputs.
-3. Solve the ODE over a specified time interval.
-4. Plot the results to visualize the temperature change over time.
+You can input your own values for arrival rate and processing rate, e.g.:
+
+- Arrival Rate: 3.5 tasks per unit time
+- Processing Rate: 1.2 tasks per unit time
+
