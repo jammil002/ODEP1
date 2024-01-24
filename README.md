@@ -28,11 +28,7 @@ This is a Python program that allows you to solve and visualize the Queue Length
 
 2. Navigate to the directory where you cloned or downloaded the `ODEP1` repository.
 
-3. Run the program:
-
-    ```bash
-    python ODE_P1.py
-    ```
+3. Run the program in the python coding IDE of choice. 
 
 4. Follow the on-screen prompts to input the arrival rate and processing rate. You can enter your values or press Enter to use default values (2.0 for arrival rate and 1.0 for processing rate).
 
