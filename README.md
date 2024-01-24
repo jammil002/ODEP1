@@ -19,7 +19,7 @@ This is a Python program that allows you to solve and visualize the Queue Length
 3. Install the required Python packages (NumPy, SciPy, and Matplotlib) using pip:
 
     ```bash
-    pip install numpy scipy matplotlib
+    pip3 install numpy scipy matplotlib
     ```
 
 ## Usage
